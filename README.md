@@ -5,6 +5,11 @@ In this repository we will conduct automation tests using Playwright, Python & P
 
 ---
 
+## 🔎 View Live Report
+
+* **Allure Report:** [View Allure Report](https://ahmedmanan.github.io/Playwright_Automation_Test/reports/allure-report/index.html)
+* **HTML Report:** [View HTML Report](https://ahmedmanan.github.io/Playwright_Automation_Test/reports/report.html)
+
 ## Table of Content
 - [Pytest Essential Notes & Commands](#pytest-essential-notes-&-commands)
 
