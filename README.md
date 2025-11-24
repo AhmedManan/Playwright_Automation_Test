@@ -11,7 +11,17 @@ In this repository we will conduct automation tests using Playwright, Python & P
 * **HTML Report:** [View HTML Report](https://ahmedmanan.github.io/Playwright_Automation_Test/reports/report.html)
 
 ## Table of Content
+- [ View Live Report](#-view-live-report)
+- [Test Cases](#-test-cases)
+    - Test Execution Videos(#-test-execution-videos)
+    - Test Case Details (#-test-case-details)
 - [Pytest Essential Notes & Commands](#pytest-essential-notes-&-commands)
+
+## Test Cases
+
+### Test Execution Videos
+
+### Test Case Details
 
 ## Pytest Essential Notes & Commands
 
