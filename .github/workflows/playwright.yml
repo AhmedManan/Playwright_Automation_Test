@@ -36,7 +36,7 @@ jobs:
 
     - name: ▶️ Run Playwright tests with Pytest
       # runs all test files following the 'tests/' structure
-      run: pytest --tracing=retain-on-failure
+      run: pytest --tracing=retain-on-failure --html-report=playwright-report
 
     - name: ⬆️ Upload Test Report (Artifact)
       # Upload the HTML report as an artifact to download and view later
