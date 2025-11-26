@@ -4,6 +4,10 @@ from playwright.sync_api import Page, expect
 from ..pages.login_page import LoginPage
 from ..pages.dashboard_page import DashboardPage
 
+
+# -------------------------------------------------
+# Data Setup
+# -------------------------------------------------
 def get_csv_data() -> list:
     import csv
     data = []
@@ -13,6 +17,10 @@ def get_csv_data() -> list:
             data.append(row)
     return data
 
+
+# -------------------------------------------------
+# Tests in a Class
+# -------------------------------------------------
 def test_login(page: Page) -> None:
     login_page = LoginPage(page)
     dashboard_page = DashboardPage(page)
