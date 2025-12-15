@@ -5,31 +5,36 @@ In this repository we will conduct automation tests using Playwright, Python & P
 
 ---
 
-## 🔎 View Live Report
+## View Live Report
 
 * **Allure Report:** [View Allure Report](https://ahmedmanan.github.io/Playwright_Automation_Test/reports/allure-report/index.html)
 * **HTML Report:** [View HTML Report](https://ahmedmanan.github.io/Playwright_Automation_Test/reports/report.html)
 
 ## Table of Content
-- [ View Live Report](#-view-live-report)
-- [Test Cases](#-test-cases)
-    - [Test Execution Videos](#-test-execution-videos)
-    - [Test Case Details](#-test-case-details)
-- [Pytest Essential Notes & Commands](#pytest-essential-notes-&-commands)
+- [ View Live Report](#View-Live-Report)
+- [Test Cases](#test-cases)
+    - [Pytest Test List](#Pytest-Test-List)
+    - [BDD Test List](#BDD-Test-List)
+- [Additional Topics](#Additional-Topics)
 
 ## Test Cases
 
-### Test Execution Videos
+### Pytest Test List
 
-| Serial | Test Script Name / Details        | Execution Video |
-| ------ | --------------------------------- | --------------- |
-| 1      | Test OrangeHRM Login              | [Base](/videos/base.mp4) |
-| 1      | Test OrangeHRM Dashboard          | [Base](/videos/base.mp4) |
+| Serial | Test Script Name / Details                        | Status |
+|--------|---------------------------------------------------|--------|
+| 01     | Test OrangeHRM valid Login                        | ✔️     |
+| 02     | Test OrangeHRM invalid Login                      | ✔️     |
+| 03     | Test OrangeHRM dashboard                          | ✔️     |
+| 04     | Test OrangeHRM dashboard sidebar navigation items | ✔️     |
+| 05     | Test OrangeHRM dashboard sidebar navigation links | ✔️     |
 
-### Test Case Details
+### BDD Test List
 
-## Pytest Essential Notes & Commands
+| Serial | Test Script Name / Details | Status |
+|--------|----------------------------|--------|
+| 01     | Test OrangeHRM login       | ✔️     |
 
-- You can install Pytest using pip with the command: pip install pytest. This will download and install the latest version of Pytest from the Python Package Index (PyPI).
-- To write a basic test, create a Python file starting with test_ (e.g., test_sample.py). Define a function starting with test_ (e.g., def test_addition():) and use assertions to check the expected outcomes (e.g., assert 1 + 1 == 2).
-- To run pytest in headed mode you can type command ``` pytest --headed ``` (default headless mode). To show/ print the output if avaiable you can type the command ``` pytest --headed -s ```.
+
+## Additional Topics
+
