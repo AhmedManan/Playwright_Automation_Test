@@ -1,6 +1,6 @@
 from playwright.sync_api import Page
-from ..pages.dashboard_page import DashboardPage
-from ..tests import test_orangehrm_login
+from pages.dashboard_page import DashboardPage
+from tests import test_orangehrm_login
 
 class TestOrangeHRMDashboard:
 

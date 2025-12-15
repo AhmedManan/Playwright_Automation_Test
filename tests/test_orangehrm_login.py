@@ -1,8 +1,8 @@
 import re
 import pytest
 from playwright.sync_api import Page, expect
-from ..pages.login_page import LoginPage
-from ..pages.dashboard_page import DashboardPage
+from pages.login_page import LoginPage
+from pages.dashboard_page import DashboardPage
 
 
 # -------------------------------------------------
@@ -11,7 +11,7 @@ from ..pages.dashboard_page import DashboardPage
 def get_csv_data() -> list:
     import csv
     data = []
-    with open("./test_OrangeHRM/test_data/invalid_login_data.csv", newline='') as csvfile:
+    with open("./test_data/invalid_login_data.csv", newline='') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
             data.append(row)
@@ -26,7 +26,8 @@ def test_login(page: Page) -> None:
     dashboard_page = DashboardPage(page)
 
     page.goto("https://opensource-demo.orangehrmlive.com/")
-    login_page.login("admin", "admin123")
+    login_page.fill_username_password("admin", "admin123")
+    login_page.click_login()
     dashboard_page.is_dashboard_visible()
 
 @pytest.mark.parametrize("username, password", get_csv_data())
@@ -34,5 +35,6 @@ def test_invalid_login(page: Page, username, password) -> None:
     login_page = LoginPage(page)
 
     page.goto("https://opensource-demo.orangehrmlive.com/")
-    login_page.login(username, password)
+    login_page.fill_username_password("admin", "admin123")
+    login_page.click_login()
     expect(page.get_by_text(re.compile(f"Required|Invalid credentials", re.IGNORECASE))).to_be_visible()
