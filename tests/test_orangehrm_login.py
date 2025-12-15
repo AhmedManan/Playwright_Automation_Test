@@ -35,6 +35,6 @@ def test_invalid_login(page: Page, username, password) -> None:
     login_page = LoginPage(page)
 
     page.goto("https://opensource-demo.orangehrmlive.com/")
-    login_page.fill_username_password("admin", "admin123")
+    login_page.fill_username_password(username, password)
     login_page.click_login()
     expect(page.get_by_text(re.compile(f"Required|Invalid credentials", re.IGNORECASE))).to_be_visible()
